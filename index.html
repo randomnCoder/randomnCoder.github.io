@@ -3,16 +3,15 @@
 <title> Spaced Revision </title>
 <head>
 <script> 
-
-const fs = require('fs') 
-
-fs.readFile('questions.txt', 'utf-8', (err, data) => { 
-	if (err) throw err; 
- 
-	console.log(data); 
-}) 
-
 function file1(){
+	const fs = require('fs') 
+
+	fs.readFile('essay.txt', 'utf-8', (err, data) => { 
+		if (err) throw err; 
+ 
+		console.log(data); 
+	}) 
+	
 	window.confirm("Was the answer correct?")
 }
 
@@ -51,7 +50,7 @@ function file7(){
 
 <h1>Spaced Revision</h1>
 
-<p id="1">Hello there!</p>
+<p id="1">Hello there! Click on one the button to display a question. If you could recall the answer, then click on 'Ok', else click on 'Cancel'.</p>
 
 <button type="button" onclick="file1()">Essay</button>
 <button type="button" onclick="file2()">General Studies I</button>
